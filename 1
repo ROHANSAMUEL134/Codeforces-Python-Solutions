@@ -1,0 +1,15 @@
+def isprime(n):
+    if n in [2,3]: return True
+    if n%2==0 or n%3==0: return False
+    for i in range(5,int(n**0.5)+1,6):
+        if n%i==0 or n%(i+2)==0:
+            return False
+    return True
+
+def nxt_prime(n):
+    for i in range(n+1,m+1):
+        if isprime(i): return i
+    return -1
+
+n,m=map(int,input().split())
+print("YES" if nxt_prime(n)==m else "NO")
