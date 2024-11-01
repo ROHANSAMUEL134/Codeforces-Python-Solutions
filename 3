@@ -1,0 +1,8 @@
+n,k=map(int,input().split())
+arr=list(map(int,input().split()))
+i=0
+while i+1<k:
+    if i>=n: break
+    i+=arr[i]
+if i+1==k: print("YES")
+else: print("NO")
