@@ -1,0 +1,5 @@
+for _ in range(int(input())):
+    n=int(input())
+    dig=n%10
+    m=len(str(n))
+    print((dig-1)*10+m*(m+1)//2)
