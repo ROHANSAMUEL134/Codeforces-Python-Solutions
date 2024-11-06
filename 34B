@@ -1,0 +1,10 @@
+n,m=map(int,input().split())
+arr=list(map(int,input().split()))
+res=0
+cnt=0
+arr.sort()
+for i in arr:
+    if i>=0 or cnt==m: break
+    res+=i
+    cnt+=1
+print(-res)
