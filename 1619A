@@ -1,0 +1,4 @@
+for _ in range(int(input())):
+    s=input()
+    mid=len(s)//2
+    print("YES" if s[:mid]==s[mid:] else "NO")
