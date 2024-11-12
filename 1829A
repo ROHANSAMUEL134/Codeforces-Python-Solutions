@@ -1,0 +1,2 @@
+for _ in range(int(input())):
+    print(sum(1 for i,j in zip(input(),'codeforces') if i!=j))
