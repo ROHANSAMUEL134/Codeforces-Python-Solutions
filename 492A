@@ -1,0 +1,9 @@
+n=int(input())
+m=k=1
+while m<=n:
+    m=k*(k+1)//2
+    if m>n:
+        break
+    n-=m
+    k+=1
+print(k-1)
