@@ -1,0 +1,16 @@
+from collections import Counter
+
+def solve(arr):
+    t_sum=sum(arr)
+    dic=Counter(arr)
+    if t_sum%2 or dic[1]%2:
+        return "NO"
+    if dic[1]==0 and dic[2]%2:
+        return "NO"
+    return "YES"
+
+for _ in range(int(input())):
+    n=int(input())
+    arr=list(map(int,input().split()))
+    print(solve(arr))
+    
