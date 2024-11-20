@@ -1,0 +1,7 @@
+for _ in range(int(input())):
+    a=list(map(int,input().split()))
+    a.sort()
+    b=a[0]
+    l=a[1]
+    side=max(l,2*b)
+    print(side*side)
