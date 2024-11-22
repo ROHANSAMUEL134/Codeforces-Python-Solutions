@@ -1,0 +1,11 @@
+for _ in range(int(input())):
+    n=int(input())
+    s=input()
+    seen=set()
+    balloons=0
+    for i in s:
+        balloons+=1
+        if i not in seen:
+            balloons+=1
+            seen.add(i)
+    print(balloons)
