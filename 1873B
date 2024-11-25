@@ -1,0 +1,13 @@
+for _ in range(int(input())):
+    n=int(input())
+    arr=list(map(int,input().split()))
+    minn=min(arr)
+    flag=1
+    pdt=1
+    for i in arr:
+        if i==minn and flag:
+            pdt*=i+1
+            flag=0
+        else:
+            pdt*=i
+    print(pdt)
