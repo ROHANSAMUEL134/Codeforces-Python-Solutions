@@ -1,0 +1,11 @@
+for _ in range(int(input())):
+    n=int(input())
+    arr=list(map(int,input().split()))
+    arr.sort()
+    prev=float('inf')
+    min_diff=prev
+    for i in arr[::-1]:
+        min_diff=min(min_diff,prev-i)
+        prev=i
+    print(min_diff)
+    
