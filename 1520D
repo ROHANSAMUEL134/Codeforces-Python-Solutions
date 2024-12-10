@@ -1,0 +1,10 @@
+for _ in range(int(input())):
+    n=int(input())
+    arr=list(map(int,input().split()))
+    count={}
+    for i in range(n):
+        if arr[i]-i-1 in count:
+            count[arr[i]-i-1]+=1
+        else:
+            count[arr[i]-i-1]=1
+    print(sum(n*(n-1)//2 for n in count.values()))
