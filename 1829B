@@ -1,0 +1,11 @@
+for _ in range(int(input())):
+    n=int(input())
+    arr=list(map(int,input().split()))
+    res=temp=0
+    for i in arr:
+        if not i:
+            temp+=1
+            res=max(res,temp)
+        else:
+            temp=0
+    print(res)
