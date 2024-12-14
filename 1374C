@@ -1,0 +1,11 @@
+for _ in range(int(input())):
+    n=int(input())
+    s=input()
+    balanced=res=0
+    for i in s:
+        if i==')':
+            balanced+=1
+        else:
+            balanced-=1
+        res=max(res,balanced)
+    print(res)
