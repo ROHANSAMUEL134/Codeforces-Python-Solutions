@@ -1,0 +1,11 @@
+for i in range(int(input())):
+    n = int(input())
+    s = input()
+    low, high = 0, n - 1
+    while low < high:
+        if (s[low] == '0' and s[high] =='1') or (s[low] == '1' and s[high] =='0'):
+            low += 1
+            high -= 1
+        else:
+            break
+    print(high - low + 1)
