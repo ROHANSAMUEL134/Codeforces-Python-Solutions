@@ -1,0 +1,7 @@
+for _ in range(int(input())):
+    a,b,c,n=map(int,input().split())
+    maxx=max(a,b,c)
+    n-=(maxx-a)+(maxx-b)+(maxx-c)
+    if n<0 or n%3: print("NO")
+    else: print("YES")
+    
