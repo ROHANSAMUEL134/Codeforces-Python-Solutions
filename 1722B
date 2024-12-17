@@ -1,0 +1,10 @@
+for _ in range(int(input())):
+    n=int(input())
+    row_1=input()
+    row_2=input()
+    for i,j in zip(row_1,row_2):
+        if i!=j and (i=='R' or j=='R'):
+            print("NO")
+            break
+    else:
+        print("YES")
