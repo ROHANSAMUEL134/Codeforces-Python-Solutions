@@ -1,0 +1,8 @@
+n,m=map(int,input().split())
+days=curr=0
+while n:
+    curr+=1
+    n-=1
+    days+=1
+    if curr%m==0: n+=1
+print(days)
