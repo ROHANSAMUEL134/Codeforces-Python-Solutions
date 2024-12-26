@@ -1,0 +1,19 @@
+s = input()
+prev = 'a'
+res = 0
+for c in s:
+    dist = 0
+    i = j = prev
+    while i != c and j != c:
+        if i == 'z':
+            i = 'a'
+        else:
+            i = chr(ord(i) + 1)
+        if j == 'a':
+            j = 'z'
+        else:
+            j = chr(ord(j) - 1)
+        dist += 1
+    res += dist
+    prev = c
+print(res)
