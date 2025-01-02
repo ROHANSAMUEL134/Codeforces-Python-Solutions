@@ -1,0 +1,14 @@
+for _ in range(int(input())):
+    n = int(input())
+    moves = input()
+    x = y = 0
+    for move in moves:
+        if move == 'U': y += 1
+        if move == 'R': x += 1
+        if move == 'D': y -= 1
+        if move == 'L': x -= 1
+        if x == y == 1: 
+            print("YES")
+            break
+    else:
+        print("NO")
