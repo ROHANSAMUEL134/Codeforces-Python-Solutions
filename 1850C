@@ -1,0 +1,14 @@
+for _ in range(int(input())):
+    grid = []
+    for _ in range(8): grid.append(input())
+    
+    for i in range(8):
+        for j in range(8):
+            if grid[i][j].isalpha():
+                if i > 0 and grid[i - 1][j].isalpha(): continue
+                temp = ""
+                k = i
+                while k < 8 and grid[k][j].isalpha():
+                    temp += grid[k][j]
+                    k += 1
+                print(temp)
