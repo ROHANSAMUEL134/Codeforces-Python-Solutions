@@ -1,0 +1,10 @@
+for _ in range(int(input())):
+    n = int(input())
+    arr = list(map(int, input().split()))
+    balance = 0
+    for i in arr:
+        if i % 2:
+            balance += 1
+        else:
+            balance -= 1 
+    print("No" if balance else "Yes")
