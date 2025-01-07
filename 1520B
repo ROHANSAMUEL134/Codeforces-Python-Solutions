@@ -1,0 +1,13 @@
+def solve(n):
+    if n < 10:
+        return n
+    
+for _ in range(int(input())):
+    n = int(input())
+    cnt = 0
+    for i in range(1, 10):
+        st = i
+        while st <= n:
+            cnt += 1
+            st = st * 10 + i
+    print(cnt)
