@@ -1,0 +1,10 @@
+for _ in range(int(input())):
+    n = int(input())
+    s = input()
+    st_idx = -1
+    for i in range(n):
+        if s[i] == 'B':
+            if st_idx == -1:
+                st_idx = i
+            end_idx = i
+    print(end_idx - st_idx + 1)
