@@ -1,0 +1,10 @@
+for _ in range(int(input())):
+    n = int(input())
+    max_quality = 0
+    winner = 0
+    for i in range(n):
+        a,b = map(int, input().split())
+        if b > max_quality and a <= 10:
+            max_quality = b
+            res = i + 1
+    print(res)
