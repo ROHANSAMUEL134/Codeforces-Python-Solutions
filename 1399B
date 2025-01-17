@@ -1,0 +1,19 @@
+for _ in range(int(input())):
+    n = int(input())
+    arr = list(map(int, input().split()))
+    brr = list(map(int, input().split()))
+    min_app = min(arr)
+    min_org = min(brr)
+    res = 0
+    for app,org in zip(arr, brr):
+        if app > min_app or org > min_org:
+            if app > min_app and org > min_org:
+                if app - min_app < org - min_org:
+                    res += (app - min_app) + ((org - min_org) - (app - min_app))
+                else:
+                    res += (org - min_org) + ((app - min_app) - (org - min_org))
+            elif app > min_app:
+                res += app - min_app
+            else:
+                res += org - min_org
+    print(res)
