@@ -1,0 +1,7 @@
+n = int(input())
+cnt = 0
+for l in range(1, n):
+    mem = n - l
+    if mem % l == 0:
+        cnt += 1
+print(cnt)
