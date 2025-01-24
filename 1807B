@@ -1,0 +1,8 @@
+for _ in range(int(input())):
+    n = int(input())
+    a = list(map(int, input().split()))
+    odd = eve = 0
+    for i in a:
+        if i % 2: odd += i
+        else: eve += i
+    print("YES" if eve > odd else "NO" )
