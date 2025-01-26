@@ -1,0 +1,13 @@
+n, q = map(int, input().split())
+arr = list(map(int, input().split()))
+arr += [0] * (100004 - n)
+arr[:] = [0] + arr
+d = [0] * 100005
+v = [False] * 100005
+for i in range(n, 0, -1):
+    if(v[arr[i]] == False): d[i] += 1
+    v[arr[i]] = True
+for i in range(n, 0, -1): d[i] += d[i + 1]
+for _ in range(q):
+    print(d[int(input())])
+    
