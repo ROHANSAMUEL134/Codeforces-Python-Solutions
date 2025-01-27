@@ -1,0 +1,27 @@
+for _ in range(int(input())):
+    n = int(input())
+    arr = list(map(int, input().split()))
+    if n % 2:
+        for i in arr:
+            if i % 2:
+                print("YES")
+                break
+        else:
+            print("NO")
+    else:
+        odd = even = 0
+        for i in arr:
+            if i % 2:
+                if even:
+                    print("YES")
+                    break
+                else:
+                    odd = 1
+            else:
+                if odd:
+                    print("YES")
+                    break
+                else:
+                    even = 1
+        else:
+            print("NO")
