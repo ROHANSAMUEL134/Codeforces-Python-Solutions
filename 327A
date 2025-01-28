@@ -1,0 +1,13 @@
+n  = int(input())
+arr = list(map(int, input().split()))
+cnt = ext = 0
+extm = -1
+for i in arr:
+    if i:
+        cnt += 1
+        if ext > 0: ext -=1
+    else:
+        ext += 1
+        if ext > extm:
+            extm = ext
+print(cnt + extm)
