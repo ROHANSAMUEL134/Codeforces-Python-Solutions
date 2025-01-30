@@ -1,0 +1,7 @@
+for _ in range(int(input())):
+    l, r = map(int, input().split())
+    x = y = 0
+    if l * 2 <= r:
+        print(l, l + l)
+    else:
+        print(-1, -1)
