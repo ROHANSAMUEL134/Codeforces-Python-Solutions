@@ -1,0 +1,12 @@
+from collections import deque
+
+for _ in range(int(input())):
+    n = int(input())
+    dq = deque(list(map(int, input().split())))
+    res = []
+    while dq:
+        res.append(dq.popleft())
+        if dq:
+            res.append(dq.pop())
+    print(*res)
+    
