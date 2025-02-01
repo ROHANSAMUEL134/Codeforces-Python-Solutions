@@ -1,0 +1,10 @@
+import heapq
+
+for _ in range(int(input())):
+    heap = list(map(int, input().split()))
+    heapq.heapify(heap)
+    for x in range(5):
+        minn = heapq.heappop(heap)
+        heapq.heappush(heap, minn + 1)
+    print(heap[0] * heap[1] * heap[2])
+        
