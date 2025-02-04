@@ -1,0 +1,6 @@
+for _ in range(int(input())):
+    n, k = map(int, input().split())
+    dic = {'A' : 0, 'B' : 0, 'C' : 0, 'D' : 0, 'E' : 0, 'F' : 0, 'G' : 0}
+    for i in input(): dic[i] += 1
+    print(sum(k - j for j in dic.values() if j < k))
+        
