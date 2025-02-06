@@ -1,0 +1,11 @@
+for _ in range(int(input())):
+    a, b, c = map(int, input().split())
+    if c % 2:
+        a += c // 2 + 1
+    else:
+        a += c // 2
+    b += c // 2
+    if a > b:
+        print("First")
+    else:
+        print("Second")
