@@ -1,0 +1,12 @@
+for _ in range(int(input())):
+    s = input()
+    hr = s[:2]
+    mn = s[3:]
+    if hr == "00":
+        print("12:" + mn + " AM")
+    elif hr == "12":
+        print(s + " PM")
+    elif int(hr) < 12:
+        print(s + " AM")
+    else:
+        print(str(int(hr) - 12).zfill(2) + ":" + mn + " PM")
