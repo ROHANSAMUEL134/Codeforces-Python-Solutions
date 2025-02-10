@@ -1,0 +1,33 @@
+for _ in range(int(input())):
+    x, y = map(int, input().split())
+    a, b = map(int, input().split())
+    if x == 0: 
+        print(abs(y) * a)
+        continue
+    if y == 0: 
+        print(abs(x) * a)
+        continue
+    if x == y:
+        print(min(abs(x) * b, 2 * abs(x) * a))
+        continue
+    if x > 0 and y > 0:
+        if x > y:
+            print(min((x - y) * a + y * b, (x + y) * a))
+        else:
+            print(min((y - x) * a + x * b, (x + y) * a))
+    elif x < 0 and y < 0:
+        if x > y:
+            print(min((abs(y) - abs(x)) * a + abs(x) * b, (x + y) * -a))
+        else:
+            print(min((abs(x) - abs(y)) * a + abs(y) * b, (x + y) * -a))
+    elif x > 0 and y < 0:
+        print(min(x * a + abs(y) * a, (x + abs(y)) * a + abs(y) * b, (x + abs(y)) * a + x * b))
+    else:
+        print(min(abs(x) * a + y * a, (abs(x) + y) * a + y * b, (abs(x) + y) * a + abs(x) * b))
+        
+            
+            
+            
+        
+        
+        
