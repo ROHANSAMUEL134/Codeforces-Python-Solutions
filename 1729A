@@ -1,0 +1,7 @@
+for _ in range(int(input())):
+    a, b, c = map(int, input().split())
+    t_a = a - 1
+    t_b = abs(b - c) + c - 1
+    if t_a < t_b: print(1)
+    elif t_b < t_a: print(2)
+    else: print(3)
