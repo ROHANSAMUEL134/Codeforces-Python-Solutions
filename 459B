@@ -1,0 +1,10 @@
+n = int(input())
+arr = list(map(int, input().split()))
+minn = maxx = arr[0]
+dic = {}
+for i in arr:
+    dic[i] = dic.get(i, 0) + 1
+    minn = min(minn, i)
+    maxx = max(maxx, i)
+if maxx == minn: print(maxx - minn, n * (n - 1) // 2)
+else: print(maxx - minn, dic[maxx] * dic[minn])
