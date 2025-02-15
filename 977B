@@ -1,0 +1,11 @@
+n = int(input())
+s = input()
+freq = {}
+max_occ = 0
+for i in range(n - 1):
+    x = s[i] + s[i + 1]
+    freq[x] = freq.get(x, 0) + 1
+    if freq[x] > max_occ:
+        max_occ = freq[x]
+        res = x
+print(res)
