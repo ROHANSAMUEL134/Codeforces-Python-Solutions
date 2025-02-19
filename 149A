@@ -1,0 +1,12 @@
+k = int(input())
+arr = list(map(int, input().split()))
+curr = res = 0
+arr.sort()
+while curr < k:
+    if arr:
+        curr += arr.pop()
+        res += 1
+    else:
+        res = -1
+        break
+print(res)
