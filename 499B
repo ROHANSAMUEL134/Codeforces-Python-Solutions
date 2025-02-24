@@ -1,0 +1,13 @@
+n, m = map(int, input().split())
+dic = {}
+for _ in range(m):
+    i, j = input().split()
+    dic[i] = j
+res = ""
+for i in input().split():
+    if len(dic[i]) < len(i):
+        res += dic[i]
+    else:
+        res += i
+    res += ' '
+print(res)
