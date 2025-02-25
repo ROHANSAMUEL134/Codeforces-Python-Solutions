@@ -1,0 +1,23 @@
+n = int(input())
+s1 = list(map(int, input().split()))
+s2 = list(map(int, input().split()))
+s3 = list(map(int, input().split()))
+
+dic1, dic2, dic3 = {}, {}, {}
+
+for i in s1: dic1[i] = dic1.get(i, 0) + 1
+for i in s2: dic2[i] = dic2.get(i, 0) + 1
+for i in s3: dic3[i] = dic3.get(i, 0) + 1
+
+for i,j in dic1.items():
+    if j - 1 == dic2.get(i, 0):
+        print(i)
+        break
+
+for i,j in dic2.items():
+    if j - 1 == dic3.get(i, 0):
+        print(i)
+        break
+
+
+        
