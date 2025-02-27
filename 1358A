@@ -1,0 +1,7 @@
+for _ in range(int(input())):
+    a, b = map(int, input().split())
+    ans = a * b
+    if ans % 2:
+        print(ans // 2 + 1)
+    else:
+        print(ans // 2)
