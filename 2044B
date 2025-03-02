@@ -1,0 +1,7 @@
+for _ in range(int(input())):
+    s = ""
+    for c in input()[::-1]:
+        if c == 'q': s += 'p'
+        elif c == 'p': s += 'q'
+        else: s += 'w'
+    print(s)
