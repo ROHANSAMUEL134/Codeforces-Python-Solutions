@@ -1,0 +1,14 @@
+for _ in range(int(input())):
+    n = 2 * int(input())
+    grid = [['-'] * n for _ in range(n)]
+    for i in range(0, n, 2):
+        for j in range(0, n, 2):
+            if (i % 4 == 0 and j % 4 == 0) or (i % 4 and j % 4):
+                for x in range(i, i + 2):
+                    for y in range(j, j + 2):
+                        grid[x][y] = '#'
+            else:
+                for x in range(i, i + 2):
+                    for y in range(j, j + 2):
+                        grid[x][y] = '.'
+    for i in grid: print(''.join(i))
