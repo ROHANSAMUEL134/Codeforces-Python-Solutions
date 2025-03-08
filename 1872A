@@ -1,0 +1,10 @@
+import math
+
+for _ in range(int(input())):
+    a, b, c = map(int, input().split())
+    if a == b: 
+        print(0)
+        continue
+    x = abs(a - b) / 2
+    if x <= c: print(1)
+    else: print(math.ceil(x / c))
