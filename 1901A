@@ -1,0 +1,11 @@
+for _ in range(int(input())):
+    n, x = map(int, input().split())
+    arr = list(map(int, input().split()))
+    prev = 0
+    res = 0
+    for i in arr:
+        res = max(res, i - prev)
+        prev = i
+    res = max(res, 2 * (x - prev))
+    print(res)
+        
