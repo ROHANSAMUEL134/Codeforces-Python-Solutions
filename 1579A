@@ -1,0 +1,10 @@
+for _ in range(int(input())):
+    s = input()
+    freq = [0, 0, 0]
+    for i in s:
+        if i == 'A': freq[0] += 1
+        elif i == 'B': freq[1] += 1
+        else: freq[-1] += 1
+    freq[1] -= freq[0] + freq[-1]
+    if freq[1]: print("NO")
+    else: print("YES")
