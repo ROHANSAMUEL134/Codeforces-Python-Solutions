@@ -1,0 +1,12 @@
+for _ in range(int(input())):
+    n = input()
+    if len(n) < 3:
+        print("NO")
+        continue
+    if n[:2] != '10':
+        print("NO")
+        continue
+    if int(n[2:]) < 2 or str(int(n[2:])) != n[2:]: 
+        print("NO")
+        continue
+    print("YES")
