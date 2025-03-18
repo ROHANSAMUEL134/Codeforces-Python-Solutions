@@ -1,0 +1,10 @@
+s = "abcdefghijklmnopqrstuvwxyz"
+for _ in range(int(input())):
+    n, a, b = map(int, input().split())
+    k = 0 
+    res = ""
+    for i in range(n):
+        res += s[k]
+        k += 1
+        if k == b: k = 0
+    print(res)
